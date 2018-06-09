@@ -50,3 +50,9 @@ Steps used to install OCaml and run a basic HelloWorld program.  Numbers are jus
   
   -------------------------------------------------------------------------------------------------------------------
   
+  http://www.cs.cornell.edu/courses/cs3110/2018sp/
+  
+  https://caml.inria.fr/pub/docs/u3-ocaml/ocaml-steps.html
+  
+  https://realworldocaml.org/
+  
