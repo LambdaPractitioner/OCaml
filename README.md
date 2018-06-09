@@ -39,5 +39,12 @@ Steps used to install OCaml and run a basic HelloWorld program.  Numbers are jus
   
   657  ./hello
   
+  -------------------------------------------------------------------------------------------------------------------
   
+  Download Core from Jane Street Capital's GitHub.
+  https://github.com/janestreet/core
+  
+  Better is just installing using OPAM
+  
+  -------------------------------------------------------------------------------------------------------------------
   
