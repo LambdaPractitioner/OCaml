@@ -50,6 +50,25 @@ Steps used to install OCaml and run a basic HelloWorld program.  Numbers are jus
   
   -------------------------------------------------------------------------------------------------------------------
   
+  opam install utop
+  opam install async
+  
+  -------------------------------------------------------------------------------------------------------------------
+  
+  Create .ocamlinit
+  
+  From Linux shell, open your favorite editor and create the file .ocamlinit
+  Add the following content:
+
+#use "topfind"
+#thread
+#require "ppx jane,core.top"
+#require "async"
+#require "core.extended"
+open Core.Std
+
+  -------------------------------------------------------------------------------------------------------------------
+  
   http://www.cs.cornell.edu/courses/cs3110/2018sp/
   
   https://caml.inria.fr/pub/docs/u3-ocaml/ocaml-steps.html
