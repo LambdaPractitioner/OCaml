@@ -46,5 +46,7 @@ Steps used to install OCaml and run a basic HelloWorld program.  Numbers are jus
   
   Better is just installing using OPAM
   
+  opam install core
+  
   -------------------------------------------------------------------------------------------------------------------
   
