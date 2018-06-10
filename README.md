@@ -1,54 +1,55 @@
 # OCaml
 Repository for learning OCaml
 
-Steps used to install OCaml and run a basic HelloWorld program.  Numbers are just history on my particular machine.
-
-  640  ocaml
+Steps used to install OCaml and run a basic HelloWorld program.
+ 
+  sudo apt-get install ocaml
   
-  641  sudo apt-get install ocaml
+  sudo add-apt-repository ppa:avsm/ppa
   
-  642  opam
+  sudo apt-get update
   
-  643  sudo add-apt-repository ppa:avsm/ppa
+  sudo apt-get install ocaml-native-compilers calmp4-extra opam
   
-  644  sudo apt-get update
+  sudo apt-get install ocaml-native-compilers camlp4-extra opam
   
-  645  sudo apt-get install ocaml-native-compilers calmp4-extra opam
+  Take it for a spin ... 
   
-  646  sudo apt-get install ocaml-native-compilers camlp4-extra opam
+  opam
   
-  647  opam
+  opam list
   
-  648  opam list
+  opam init
   
-  649  opam init
+  eval `opam config env`
   
-  650  eval `opam config env`
+  ocaml
   
-  651  ocaml
+  create an OCaml directory ... 
   
-  652  ls
+  mkdir OCaml
   
-  653  mkdir OCaml
+  cd OCaml
   
-  654  cd OCaml
+  Compile a file
   
-  655  ls
+  ocamlc -o hello hello.ml
   
-  656  ocamlc -o hello hello.ml
+  Execute the compiled program
   
-  657  ./hello
+  ./hello
   
   -------------------------------------------------------------------------------------------------------------------
-  
-  Download Core from Jane Street Capital's GitHub.
-  https://github.com/janestreet/core
-  
-  Better is just installing using OPAM
+  The book Real World OCaml: Functional Programming for the Masses by Yaron Minsky, Anil Madhavapeddy & Jason Hickey,
+  uses Core, a library from Jane Street Capital.  
+
+  One could download Core from Jane Street Capital's GitHub (https://github.com/janestreet/core) but I don't now how
+  this should be installed.  The package manager OPAM handles the installation better.  To install using OPAM, type:
   
   opam install core
   
   -------------------------------------------------------------------------------------------------------------------
+  Additional OPAM download that are needed to follow the example in the book:
   
   opam install utop
   opam install async
@@ -62,16 +63,27 @@ Steps used to install OCaml and run a basic HelloWorld program.  Numbers are jus
 
 #use "topfind"
 #thread
-#require "ppx jane,core.top"
+#require "ppx_jane,core.top"
 #require "async"
 #require "core.extended"
 open Core.Std
 
   -------------------------------------------------------------------------------------------------------------------
+Explanation of the bug with .ocamlinit
+
+File ".ocamlinit", line 1:
+Error: Reference to undefined global `Longident'
+
+https://github.com/diml/utop/issues/213
+
+  -------------------------------------------------------------------------------------------------------------------
+  Good resources:
+  
+  https://realworldocaml.org/
   
   http://www.cs.cornell.edu/courses/cs3110/2018sp/
   
   https://caml.inria.fr/pub/docs/u3-ocaml/ocaml-steps.html
   
-  https://realworldocaml.org/
+  
   
